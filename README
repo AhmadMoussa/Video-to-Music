@@ -1,0 +1,17 @@
+Small pet project that is supposed to ultimately enable midi generation from a video stream:
+
+Using:
+  - OpenCV
+  - Python
+  ... more to come
+  
+First commit summary:
+  created python script that takes a videostream and detects a color in it using openCV by creating a mask on top of it
+  
+ Future:
+  Divide video frames into smaller cells
+  Use these cell to detect an activation of color
+  If activation positive, send a signal
+  Assign cells to midi notes
+  Quantize these notes
+  Return a midi stream

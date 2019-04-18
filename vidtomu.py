@@ -7,8 +7,7 @@ cap = cv2.VideoCapture(0)
 #   I think I will need to create a custom class for my purposes
 #   as well as a grid listener
 
-### This is now Obsolete ### MIght be salvaged for other bits of Code ###
-#   Divides Image or frame into several images depending on subdivision rate
+
 def subdivide(frame, numOfSubFrms):
     #cloning the original frame such that we'll be working on a copy from now on
     frameC = np.array(frame, copy = True)
@@ -106,15 +105,7 @@ while(1):
 
     #subdivide(frame, 2)
 
-    GF = GridFrame(frame,3)
 
-    GF.showGridFrame()
-
-    GF.showCells()
-
-    GF.drawCellBorders()
-
-    GF.drawGrid()
 
     k = cv2.waitKey(5) & 0xFF
     if k == 27:
