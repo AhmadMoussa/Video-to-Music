@@ -1,11 +1,13 @@
 import numpy as np
 import cv2
+from GridClass import GridFrame
 
 cap = cv2.VideoCapture(0)
 
 #   I think I will need to create a custom class for my purposes
 #   as well as a grid listener
 
+<<<<<<< HEAD
 #   Grid Frame Class that will serve as base for my project
 #   It'll carry the frame and the Grid Listener
 class GridFrame:
@@ -63,6 +65,10 @@ class GridCell():
 
 
 #Divides Image or frame into several images depending on subdivision rate
+=======
+### This is now Obsolete ### MIght be salvaged for other bits of Code ###
+#   Divides Image or frame into several images depending on subdivision rate
+>>>>>>> changes
 def subdivide(frame, numOfSubFrms):
     #cloning the original frame such that we'll be working on a copy from now on
     frameC = np.array(frame, copy = True)
@@ -112,6 +118,24 @@ def colorMask(frame, lower, upper):
     res = cv2.bitwise_and(frame, frame, mask = mask)
     return frame, mask, res
 
+#   Method to time average run time of functions that are passed
+#   Dunno how to use this yet lmao
+#   average and counter should be passed as 0 and 1 respectively
+def measureTime(average, counter, methodToTime):
+    import time
+    start = time.time()
+
+    methodToTime()
+
+    end = time.time()
+    print(end - start)
+    print("Execution time above ^^^")
+    print("")
+    time = end - start
+    average += time
+    counter += 1
+    print("Average Time: ", average/counter, "Counter: ", counter)
+
 
 # here we display the original frame alongside the mask that we created and the colorshifted picture
 def show(frame, mask, res):
@@ -142,9 +166,21 @@ while(1):
 
     #subdivide(frame, 2)
 
+<<<<<<< HEAD
     GF = GridFrame(frame,2)
     GF.showGridFrame()
     GF.showCells()
+=======
+    GF = GridFrame(frame,3)
+
+    GF.showGridFrame()
+
+    GF.showCells()
+
+    GF.drawCellBorders()
+
+    GF.drawGrid()
+>>>>>>> changes
 
     k = cv2.waitKey(5) & 0xFF
     if k == 27:
