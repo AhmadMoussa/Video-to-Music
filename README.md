@@ -1,3 +1,5 @@
+# VidToMu
+
 Small pet project that is supposed to ultimately enable midi generation from a video stream:
 
 Using:
