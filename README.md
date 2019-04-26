@@ -18,11 +18,11 @@ Small pet project that is supposed to ultimately enable midi generation from a v
 
   
 ## Future:
-  * ~~Divide video frames into smaller cells
-  * ~~Use these cell to detect an activation of color
-  * ~~If activation positive, send a signal
-  * ~~Assign cells to midi notes
-  * ~~Quantize these notes
+  * ~~Divide video frames into smaller cells~~
+  * ~~Use these cell to detect an activation of color~~
+  * ~~If activation positive, send a signal~~
+  * ~~Assign cells to midi notes~~
+  * ~~Quantize these notes~~
   * Return a midi stream
   * Figure out which midi library to use
   * fix bugs
