@@ -35,3 +35,4 @@ Now that everything somehow works, I need to determine the best model for my alg
   * Figure out which midi library to use
   * fix bugs
   * Optimize the pixel loops in the cellClass
+  * figure out how the output music is being modeled and what role the video/color elements play in this generation
