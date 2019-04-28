@@ -14,6 +14,7 @@ Small pet project that is supposed to ultimately enable midi generation from a v
 ## Actual Problem 4/28/2019
 Now that everything somehow works, I need to determine the best model for my algorithm to get desirable results. The questions that I'm asking myself are:
 1. How do certain colors translate into certain melodies, scales and modes?
+  * maybe take into consideration the positional data of color triggers, https://www.youtube.com/watch?v=sxtUjeYJU7A comments on this video give relevant ideas
 2. What aspect does the color intensity play in this translation?
 3. How is the amount of color present in a cell influencing the generated music?
 4. Could I use crowdsourcing and machine learning to get data and enhance my algorithm? 
