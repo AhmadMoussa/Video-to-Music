@@ -17,6 +17,7 @@ Now that everything somehow works, I need to determine the best model for my alg
 2. What aspect does the color intensity play in this translation?
 3. How is the amount of color present in a cell influencing the generated music?
 4. Could I use crowdsourcing and machine learning to get data and enhance my algorithm? 
+5. explore histogram comparison to compare the amount of change of color between frames
   
 ## Updates:
 * Gricclass that splits frame into several subframes
