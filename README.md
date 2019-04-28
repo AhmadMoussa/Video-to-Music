@@ -12,7 +12,7 @@ Small pet project that is supposed to ultimately enable midi generation from a v
 * Optimize pixel loops, currently the loops to detect color activations are not very efficient, I need to find a better way to do it. Viable options are cython or multithreading. Or both combined. Also look into OpenMP.
 
 ## Actual Problem 4/28/2019
-* Now that everything somehow works, I need to determine the best model for my algorithm to get desirable results. The questions that I'm asking myself are:
+Now that everything somehow works, I need to determine the best model for my algorithm to get desirable results. The questions that I'm asking myself are:
 1 How do certain colors translate into certain melodies, scales and modes?
 2 What aspect does the color intensity play in this translation?
 3 How is the amount of color present in a cell influencing the generated music?
