@@ -10,6 +10,7 @@ Small pet project that is supposed to ultimately enable midi generation from a v
 ## Current Problems:
 * Need to determine which midi library is best for my purpose. Vishnubob, music21 or midiutil are viable options. Maybe I will write my own library. (for now I am sticking to midiutil) 
 * Optimize pixel loops, currently the loops to detect color activations are not very efficient, I need to find a better way to do it. Viable options are cython or multithreading. Or both combined. Also look into OpenMP.
+* 4/29/2019  need to send realtime midi signals to ableton live from python
 
 ## Actual Problem 4/28/2019
 Now that everything somehow works, I need to determine the best model for my algorithm to get desirable results. The questions that I'm asking myself are:
@@ -34,8 +35,9 @@ Now that everything somehow works, I need to determine the best model for my alg
   * ~~Assign cells to midi notes~~
   * ~~Quantize these notes~~
   * Return a midi stream
-  * Figure out which midi library to use
+  * ~~Figure out which midi library to use~~ for now I am using MidiUtil which is doing just fine, but I don't know if I actually require it since I'm don't really need to create midi files to disk and back, I need realtime transmission
   * fix bugs
   * Optimize the pixel loops in the cellClass
   * need it to be able to detect a range of colors not just one specific color
   * figure out how the output music is being modeled and what role the video/color elements play in this generation
+  * send midi signals to ableton live from python in realtime [This is a start on how to do so](https://wiki.python.org/moin/PythonInMusic#MIDI_Mania)
