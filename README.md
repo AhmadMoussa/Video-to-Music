@@ -5,18 +5,20 @@ Small pet project that is supposed to ultimately enable midi generation from a v
 ## Using:
 * Python
 * OpenCV
-* midiutil
+* Midiutil
+* Refer to this [tutorial](https://github.com/AhmadMoussa/Python-Midi-Ableton) to set up python and ableton
 
 ## Current Problems:
-* Need to determine which midi library is best for my purpose. Vishnubob, music21 or midiutil are viable options. Maybe I will write my own library. (for now I am sticking to midiutil) 
-* Optimize pixel loops, currently the loops to detect color activations are not very efficient, I need to find a better way to do it. Viable options are cython or multithreading. Or both combined. Also look into OpenMP.
-* 4/29/2019  need to send realtime midi signals to ableton live from python
+* 05/08/2019 Need to find an efficient way to translate pixels into music. 
+* ~~~Need to determine which midi library is best for my purpose. Vishnubob, music21 or midiutil are viable options. Maybe I will write my own library. (for now I am sticking to midiutil)~~~ Not needed anymore, figured out how to send signals in realtime to ableton. Hence for now I don't require to handle midi files. Otherwise, midiutil works just fine.
+* Optimize pixel loops, currently the loops to detect color activations are not very efficient, I need to find a better way to do it. Viable options are cython or multithreading. Or both combined. Also look into OpenMP. 05/08/2019 This is still a problem. I discovered that it is even worse now with high resolution videos. There has to be a much faster way than what I am doing.
+* ~~~4/29/2019  need to send realtime midi signals to ableton live from python~~~
 
 ## Actual Problem 4/28/2019
 Now that everything somehow works, I need to determine the best model for my algorithm to get desirable results. The questions that I'm asking myself are:
 1. How do certain colors translate into certain melodies, scales and modes?
   * maybe take into consideration the positional data of color triggers, https://www.youtube.com/watch?v=sxtUjeYJU7A comments on this video give relevant ideas
-2. What aspect does the color intensity play in this translation?
+2. What aspect does the color intensity play in this translation? 05/08/2019 intensity could play some sort of threshholding value, such that certain notes only trigger if a certain value is surpassed. 
 3. How is the amount of color present in a cell influencing the generated music?
 4. Could I use crowdsourcing and machine learning to get data and enhance my algorithm? 
 5. explore histogram comparison to compare the amount of change of color between frames
